@@ -17,7 +17,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "SoapBot\\": "app/SoapBot"
+            "HookBot\\": "app/HookBot"
         },
         "classmap": [
             "database/"

@@ -1,6 +1,6 @@
 <?php
 
-namespace SoapBot\GitHooks\Hooks;
+namespace HookBot\GitHooks\Hooks;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -10,7 +10,7 @@ class PullRequestHookHandler
 	public function handle(Request $request)
 	{
 		$action = $request->get('action');
-		$class = sprintf('SoapBot\\GitHooks\\Events\\PullRequest\\%sEventHandler', Str::studly($action));
+		$class = sprintf('HookBot\\GitHooks\\Events\\PullRequest\\%sEventHandler', Str::studly($action));
 
 		if (!class_exists($class)) {
 			return ['error' => 'No event handler exists'];

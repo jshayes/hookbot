@@ -1,6 +1,6 @@
 <?php
 
-namespace SoapBot\GitHooks;
+namespace HookBot\GitHooks;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;

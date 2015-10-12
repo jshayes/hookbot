@@ -1,6 +1,6 @@
 <?php
 
-namespace SoapBot\GitHooks\Events\PullRequest;
+namespace HookBot\GitHooks\Events\PullRequest;
 
 use Illuminate\Http\Request;
 
