@@ -11,3 +11,6 @@
 |
 */
 $app->post('target/{type}', 'Controller@processGithubHook');
+$app->get('ping', function() {
+	return 'pong';
+});
