@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Psr\Log\LoggerInterface;
-use SoapBot\GitHooks\Dispatcher;
+use HookBot\GitHooks\Dispatcher;
 
 class Controller extends BaseController
 {
