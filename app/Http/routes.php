@@ -10,7 +10,7 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
-$app->post('target/{type}', 'Controller@processGithubHook');
+$app->post('target', 'Controller@processGithubHook');
 $app->get('ping', function() {
 	return 'pong';
 });
