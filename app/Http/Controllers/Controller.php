@@ -17,4 +17,8 @@ class Controller extends BaseController
     	$response = $dispatcher->dispatch($request, $hookType);
     	return response()->json($response);
     }
+
+    public function slack(Request $request) {
+    	Logger::info($request->all());
+    }
 }
