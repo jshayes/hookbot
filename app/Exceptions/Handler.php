@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
+use HookBot\Exception\Exception as HookBotException;
 
 class Handler extends ExceptionHandler
 {
@@ -39,6 +40,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if ($e instanceof HookBotException) {
+            return response()->json($e->getPayload(), $e->getErrorCode());
+        }
         return parent::render($request, $e);
     }
 }
