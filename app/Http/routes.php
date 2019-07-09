@@ -14,4 +14,4 @@ $app->post('target', 'Controller@processGithubHook');
 $app->get('ping', function() {
 	return 'pong';
 });
-$app->post('slack/more', 'Controller@slack');
+$app->post('slackbot', 'Controller@slack');
